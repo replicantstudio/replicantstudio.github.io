@@ -1,0 +1,238 @@
+---
+---
+
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "bootswatch";
+
+@font-face {
+  font-family: "Monogram";
+  src: url(../fonts/monogram.ttf) format("truetype");
+}
+body {
+  font-family: "Monogram", sans-serif !important;
+}
+a {
+  color: $white;
+  outline: none;
+}
+a:hover {
+  color: $pink;
+  text-decoration: none;
+}
+#menu {
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 510px;
+  height: 470px;
+  margin: -235px 0 0 -255px;
+}
+#menu h1 {
+  font-size: 80px;
+}
+#menu h2 {
+  font-size: 56px;
+  color: $pink;
+}
+#menu h3 {
+  font-size: 40px;
+  text-align: center;
+}
+#menu p, a {
+  font-family: "Monogram",sans-serif;
+  font-size: 48px;
+}
+.menu-list {
+  text-align: center;
+}
+div#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header-row {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+.logo {
+  // text-align: center;
+}
+.navicon {
+  // width: 300px;
+}
+.navicon .tool-tip {
+  display: none;
+  position: relative;
+  z-index: -1;
+  text-align: right;
+  font-size: 40px;
+  width: 200px;
+  left: -280px;
+}
+.navicon:hover {
+  // cursor: pointer;
+}
+.navicon a:hover {
+  // cursor: pointer;
+}
+.navicon:hover .tool-tip {
+  display: inline-block;
+}
+.pixel-image {
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+.menu-link   {
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-link:hover {
+  color: $pink;
+  text-decoration: none;
+  // text-shadow: 2px 2px 0px $white;
+}
+.menu-cursor {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.menu-item {
+  margin-right: 60px;
+}
+.menu-item:hover .menu-cursor {
+  visibility: visible;
+}
+.menu-cursor {
+  visibility: hidden;
+}
+.job-description {
+  font-size: 32px;
+  color: black;
+}
+.job-header {
+  font-size: 48px;
+  text-align: center;
+  // background-color: $pink;
+}
+.job-subheader {
+  font-size: 40px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.icon-link:hover {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3107%) hue-rotate(337deg) brightness(86%) contrast(102%);
+}
+#player {
+  position: absolute;
+  visibility: hidden;
+}
+#game {
+  // display: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+#game-canvas {
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 100%;
+  width: 100%;
+  display: none;
+  // width: 660px;
+}
+canvas {
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+#sprite-transform {
+  display: none;
+}
+.player-icon {
+  background-image: url('/images/player-transform.png');
+  background-repeat: no-repeat;
+  background-size: 704px 44px;
+
+  height: 44px;
+  width: 44px;
+  filter: invert(100%);
+  margin: 0 auto;
+}
+#start-game:hover {
+  filter: invert(14%) sepia(76%) saturate(6843%) hue-rotate(343deg) brightness(90%) contrast(90%);
+}
+.resume-list {
+  font-size: 32px;
+}
+.tutorial {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  color: $pink;
+  font-size: 48px;
+  display: none;
+  width: 600px;
+}
+#tutorial-2 {
+  width: 700px;
+}
+.project-image {
+  padding-top: 10px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+#profile-image {
+  // transform: translatey(0px);
+  // animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+  transform: rotatey(180deg);
+  transition: 0.6s;
+	transform-style: preserve-3d;
+  perspective: 1000px;
+}
+#profile-image:hover {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3107%) hue-rotate(337deg) brightness(86%) contrast(102%);
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

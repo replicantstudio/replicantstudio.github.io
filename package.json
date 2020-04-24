@@ -1,0 +1,7 @@
+{
+  "name": "replicant-studio-website",
+  "version": "1.0.0",
+  "description": "This is the website for Replicant game development studio.",
+  "author": "Replicant <hello@replicant.studio>",
+  "license": "MIT",
+}
